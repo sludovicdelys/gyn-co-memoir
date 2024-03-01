@@ -4,42 +4,44 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Présentation',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Gyn&Co est une organisation à but non lucratif, qui est sensible aux inégalités importantes et
+        aux difficultés d'accès aux services et accompagnements que les femmes, transsexuelles ou
+        personnes intersexuées rencontrent dans le domaine de la gynécologie médicale.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Objectif',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        L’objectif du projet est de créer un nouveau site pour le collectif Gyn&Co afin de pouvoir
+        ajouter des nouvelles fonctionnalités qui permettent d’améliorer l’expérience des utilisateurs
+        et utilisatrices, augmenter le trafic et faciliter la gestion administrative de la liste des
+        soignants et des soignantes.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Besoins',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        <ol>
+          <li>Créer un site soigné et accessible qui permet au collectif d’administrer leur registre de soignants et soignantes.</li>
+          <li>Permettre aux utilisateurs et utilisatrices d’effectuer une recherche multi-critères.</li>
+          <li>Faciliter l’expérience utilisateurs et utilisatrices grâce à un formulaire intéractif.</li>
+        </ol>
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

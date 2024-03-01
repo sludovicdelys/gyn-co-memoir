@@ -88,45 +88,21 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'Gyn&Co Logo',
+          src: 'img/gyn-and-co.png',
+          href: 'https://gynandco.wordpress.com/',
+          width: 60,
+          height: 60,
+        },
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
+            label: 'Blog',
+            to: '/blog',
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
+            label: 'GitHub',
+            href: 'https://github.com/facebook/docusaurus',
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Gyn&Co - a memoir. Built with Docusaurus.`,
