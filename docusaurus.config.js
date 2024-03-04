@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Gyn&Co',
-  tagline: 'A memoir',
+  tagline: 'Project report',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -79,6 +79,7 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/project', label: 'Project', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -101,11 +102,15 @@ const config = {
             to: '/blog',
           },
           {
+            label: 'Project',
+            to: '/project',
+          },
+          {
             label: 'GitHub',
             href: 'https://github.com/facebook/docusaurus',
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Gyn&Co - a memoir. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Gyn&Co - documentation. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
