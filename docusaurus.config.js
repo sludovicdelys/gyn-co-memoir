@@ -87,7 +87,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         logo: {
           alt: 'Gyn&Co Logo',
           src: 'img/gyn-and-co.png',
