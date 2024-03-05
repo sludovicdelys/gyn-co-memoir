@@ -74,7 +74,7 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'projectSidebar',
+            sidebarId: 'docSidebar',
             position: 'left',
             label: 'Project',
           },
