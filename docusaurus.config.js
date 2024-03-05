@@ -73,10 +73,10 @@ const config = {
         },
         items: [
           {
-            type: 'tutorialSidebar',
-            sidebarId: 'docSidebar',
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Project',
+            label: 'Documentation',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
