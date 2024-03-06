@@ -1,3 +1,32 @@
+# Abstract
+
+Gyn&Co was born from an non-profit organization which had been sensitive to the
+significant health inequalities and barriers to services and support that women, transsexuals
+or intersex patients from different backgrounds, origins, and physicality face regularly. In an
+attempt to create solidarity between users and effectively share recommended caregivers to a
+wider audience, the association created a website in order to develop a feminist and
+collaborative list tailored for and by the users.
+
+As the non-profit group needed a beginner friendly tool to host and build their website, they
+chose to use Wordpress as it is open-source and widely supported.
+However, Wordpress presents a few disadvantages such as slow page speed and needing an
+additional plugin for every special feature.
+
+Thus, my team was assigned the redesign of Gyn&Co to add new functionalities to improve
+the user experience, increase traffic, generate more leads and facilitate the administrative
+management of the websites’ back-office. While brainstorming we quickly came to the
+notion that a great website is a sticky website. We wanted to encourage user interaction, incite
+our users to share the content and get more return visits.
+
+Hence we reached a consensus with the client to work on different features : 
+- Improve the user experience with a multicriteria search component with an embedded
+interactive map.
+- Implement a multi-step recommendation form to reduce cognitive overload for the
+visitors and add visual appeal.
+- Build a custom back office in order to ease administrative tasks such as adding a new
+caregiver.
+- Implementing a database to provide data governance for the non-profit association.
+
 # Context et origine du projet
 
 Gyn&Co est une organisation à but non lucratif, qui est sensible aux inégalités importantes et
