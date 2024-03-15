@@ -1,4 +1,9 @@
-# Abstract
+---
+sidebar_position: 1
+---
+
+# Introduction
+## Abstract
 
 Gyn&Co was born from an non-profit organization which had been sensitive to the
 significant health inequalities and barriers to services and support that women, transsexuals
@@ -27,7 +32,7 @@ visitors and add visual appeal.
 caregiver.
 - Implementing a database to provide data governance for the non-profit association.
 
-# Context et origine du projet
+## Context et origine du projet
 
 Gyn&Co est une organisation à but non lucratif, qui est sensible aux inégalités importantes et
 aux difficultés d'accès aux services et accompagnements que les femmes, transsexuelles ou
