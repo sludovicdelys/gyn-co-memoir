@@ -77,3 +77,22 @@ conséquent, les pages se chargent plus rapidement
 - Métadonnées et en-têtes HTTP: Avec le framework, on peut fournir les métadonnées
 de la page et faciliter la compréhension du contenu de notre page pour les moteurs de
 recherche.
+
+## Arborescences 
+
+Grâce à notre tableau des user stories, nous avons pu identifier les différents rôles utilisateurs et utilisatrices de notre application. Cette étape nous a permis de représenter graphiquement les relations hiérarchiques entre les différents éléments de la plateforme Gyn&Co. Nous avons utilisé Whimsical pour la réalisation des schémas.
+
+[Arborescence du site public de Gyn&Co](/img/arborescence-public.png)
+
+[Arborescence du back-office de Gyn&Co](/img/arborescence-back-office.png)
+
+## Wireframes
+
+Nous avons ensuite réalisé des wireframes détaillées pour planifier et concevoir l'esthétique et la structure de l'expérience utilisateur et utilisatrice sur notre application. Ils nous permettent d’avoir une vue d’ensemble des éléments clés de l’interface, des intéractions, de la navigation et des fonctionnalités. Nous avons utilisé Whimsical pour la réalisation des wireframes. 
+
+Lors du développement nous avons rencontré des défis de développement et des changements de besoins qui ont affecté l'exactitude graphique entre l’application et les wireframes. Notamment nous avons rencontré des difficultés à concevoir des composants sur mesure avec Material UI qui est une bibliothèque de composants React open-source. Dans une évolution future de Gyn&Co nous utiliserons Tailwind CSS pour customiser votre code plus facilement. 
+Cependant nos wireframes n’ont pas été futiles, car elles nous ont servi de guide pour la réalisation de l’application et pour effectuer des ajustements qui s’adaptent aux capacités techniques et aux besoins en matière d’expérience utilisateur. 
+
+[Wireframe de la recommendation d'un(e) soignant(e)](/img/wireframe_recommendation.png)
+
+[Wireframe des recommandations archivées du back-office](/img/wireframe_recommendations_bo.png)
