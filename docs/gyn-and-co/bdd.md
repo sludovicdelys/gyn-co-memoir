@@ -12,12 +12,12 @@ mysql8-service:
 container_name: mysql8-container
 image: mysql:8.0
 ports:
-    - "5306:3306"
+    - "portnumber:portnumber"
 volumes:
     - mysql:/var/lib/mysql
 restart: always # always restart unless stopped manually
 environment:
-    MYSQL_ROOT_PASSWORD: secret
+    MYSQL_ROOT_PASSWORD: supersecretpasswordyouwontfindha!
 networks:
     - nginx-php81-mysql8
 ```
@@ -27,7 +27,7 @@ Dans cet extrait de notre fichier `docker-compose.yml` nous déclarons un servic
 ## Configuration de la base de données 
 Nous avons ensuite créé un fichier `.env.local` à la racine du projet dans lequel nous avons mis en place une variable d’environnement qui indique comment notre application se connecte à la base de données.
 
-`DATABASE_URL="mysql://root:secret@mysql8-service:3306/gyn-and-
+`DATABASE_URL="mysql://root:supersecretpasswordyouwontfindha!@mysql8-service:3306/gyn-and-
 co-db?serverVersion=8&charset=utf8mb4"`
 
 Dans cet extrait de notre fichier, l’URL fait référence à l’adresse de la base de données MySQL défini dans le fichier `docker-compose.yml` est exécuté dans le conteneur Docker.
