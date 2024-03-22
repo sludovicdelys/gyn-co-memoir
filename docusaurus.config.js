@@ -69,7 +69,7 @@ const config = {
         title: 'Gyn&Co',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/gyn-and-co.png',
+          src: 'img/gyn_and_co.png',
         },
         items: [
           {
@@ -90,7 +90,7 @@ const config = {
         style: 'light',
         logo: {
           alt: 'Gyn&Co Logo',
-          src: 'img/gyn-and-co.png',
+          src: 'img/gyn_and_co.png',
           href: 'https://gynandco.wordpress.com/',
           width: 60,
           height: 60,

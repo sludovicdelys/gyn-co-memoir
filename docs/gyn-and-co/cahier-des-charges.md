@@ -37,7 +37,7 @@ plateforme et de ses membres.
 
 Dans l’intention de clarifier et décrire les besoins et les attentes des utilisateurs et utilisatrices du collectif Gyn&Co nous avons rédigé un tableau qui regroupe les user stories. Ce tableau nous a permis d’assurer que nous développons des fonctionnalités qui sont vraiment utiles à l’utilisateur et nous a servi de base pour planifier et prioriser la gestion du développement. Nous avons utilisé Google Sheets pour la réalisation du tableau des user stories.
 
-[Tableau des user stories de Gyn&Co](/img/user-stories.png)
+[Tableau des user stories de Gyn&Co](/img/user_stories.png)
 
 ## Accessibilité
 
@@ -82,9 +82,9 @@ recherche.
 
 Grâce à notre tableau des user stories, nous avons pu identifier les différents rôles utilisateurs et utilisatrices de notre application. Cette étape nous a permis de représenter graphiquement les relations hiérarchiques entre les différents éléments de la plateforme Gyn&Co. Nous avons utilisé Whimsical pour la réalisation des schémas.
 
-[Arborescence du site public de Gyn&Co](/img/arborescence-public.png)
+[Arborescence du site public de Gyn&Co](/img/arborescence_public.png)
 
-[Arborescence du back-office de Gyn&Co](/img/arborescence-back-office.png)
+[Arborescence du back-office de Gyn&Co](/img/arborescence_back_office.png)
 
 ## Wireframes
 
