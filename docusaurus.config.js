@@ -46,13 +46,7 @@ const config = {
           editUrl:
             'https://gitlab.com/gyn-co-memoir/gyn-co-memoir/-/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://gitlab.com/gyn-co-memoir/gyn-co-memoir/-/edit/main/',
-        },
+        blog: false, 
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -87,12 +81,6 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       footer: {
@@ -106,12 +94,8 @@ const config = {
         },
         links: [
           {
-            label: 'Blog',
-            to: '/blog',
-          },
-          {
-            label: 'GitHub',
-            href: 'https://github.com/facebook/docusaurus',
+            label: 'Github',
+            href: 'https://github.com/sludovicdelys/gyn-co-memoir',
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Gyn&Co - documentation. Built with Docusaurus.`,
