@@ -1,6 +1,6 @@
 # Gyn&Co Memoir
 
-🚧 WIP
+🚀 It's ready ! You can check it out right [here](https://gyn-co-memoir.gitlab.io/gyn-co-memoir/)
 
 ---
 
@@ -13,4 +13,4 @@ The objective of this website is to :
 
 🦊 You can checkout the GitLab repository for this project right here : https://gitlab.com/gyn-co-memoir/gyn-co-memoir
 
-BONUS : Build a search engineer so a visitor can find information quickly and efficiently. 
+✅ BONUS : Build a search engine so visitors can find information quickly and efficiently. 
