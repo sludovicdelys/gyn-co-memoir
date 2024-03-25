@@ -39,7 +39,7 @@ Ce sera vers notre application back-end construite avec Symfony, l’ORM (Object
 
 Les XSS (Cross-site Scripting) font partie de la catégorie des vulnérabilités par injection de code au même titre que les injections SQL. Elles se produisent lorsque des scripts malveillants sont injectés et exécutés via les paramètres d’entrée côté client.
 
-```tsx
+```tsx title="/Components/Input/TextFieldInput.tsx"
 export default function TextFieldInput({
   setError,
   clearError,
@@ -150,7 +150,7 @@ Côté serveur la validation des données est gérée avec les assertions de Sym
 Elles sont implémentées avec des annotations qui sont appliquées aux propriétés d’un objet ou aux arguments d'une méthode; elles permettent de spécifier des contraintes de validation qui doivent être respectées lors de la soumission.
 Dans l’extrait de code ci-dessous venant de l’entité Doctrine `Recommendation` qui gère la recommandation d’un soignant et d’une soignante on utilise l’annotation `#[Assert\Email]` pour s’assurer qu’une adresse email est valide.
 
-```php
+```php title="/src/Entity/Recommendation.php"
 class Recommendation
 {
     #[ORM\Column(length: 255, nullable: true)]

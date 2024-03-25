@@ -10,7 +10,7 @@ En première étape nous avons utilisé la commande `make:user` du Maker Bundle 
 table utilisateur dans la base de données.
 La classe générée contient des méthodes qui seront nécessaires à la mise en place du système d’authentification de Symfony comme `getRoles()` et `eraseCredentials()`.
 
-```php
+```php title="/src/Entity/User.php"
 <?php
 
 namespace App\Entity;
@@ -247,23 +247,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-
-//    /**
-//     * @return string
-//     */
-//    public function getPlainPassword(): string
-//    {
-//        return $this->plainPassword;
-//    }
-//
-//    /**
-//     * @param string $plainPassword
-//     */
-//    public function setPlainPassword(string $plainPassword): void
-//    {
-//        $this->plainPassword = $plainPassword;
-//        $this->password = null;
-//    }
 }
 ```
 
@@ -273,7 +256,7 @@ Après avoir généré et exécuter les migrations pour créer la table de l’u
 - `providers` : dans cette section on définit le fournisseur d’utilisateurs utilisés pour charger les utilisateurs et utilisatrice venant de la base de données. Le fournisseur est donc basé sur l’entité `User` et les utilisateurs et utilisatrices sont chargés en utilisant la propriété `email` comme identifiant.
 - `firewalls` : dans cette section on définit les stratégies d’authentification pour différentes parties de notre application. Notamment, le pare-feu `main` gère l’authentification principale de l’application via un formulaire (`form_login`), en spécifiant le fournisseur d’utilisateurs à utiliser et en activant la protection CSRF: Cross-Site Request Forgery (`enable_csrf: true`). Il spécifie également un point d’entrée (`entry_point`) pour rediriger les utilisateurs vers la page de connexion en cas d’accès non autorisé. Nous spécifions également que nous souhaitons utiliser une méthode d’authentification personnalisée (`custom_authenticator`) en lui passant la classe `LoginFormAuthenticator`.
 
-```yml
+```yml title="/config/packages/security.yaml"
 security:
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
@@ -321,7 +304,7 @@ Comme énoncé précédemment, nous avons implémenté une classe personnalisée
 Notre méthode `authenticate` est appelée lorsqu’un utilisateur soumet le formulaire de connexion. Cette dernière, récupère les informations fournies dans la requête (`email`, `password`, et `_csrf_token`) et encapsulent ces informations dans un objet `Passport`. Ce dernier est ensuite renvoyé pour être utilisé lors de la tentative d’authentification, c’est ici que le serveur vérifie la validité du token jeton CSRF en comparant sa valeur avec celles stockées en session de l’utilisateur. Si les valeurs ne correspondent pas, la requête sera considérée comme étant une attaque CSRF et sera rejetée.
 Lorsque l’authentification est réussie la méthode `onAuthenticationSuccess` est appelée et redirige l’utilisateur vers la page de destination prévue.
 
-```php
+```php title="/src/Security/LoginFormAuthenticator.php"
 class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
 {
     use TargetPathTrait;
@@ -368,7 +351,7 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
 Dans notre fichier de configuration `security.yaml` du framework Symfony, nous avons défini des règles pour sécuriser les routes de notre back-office
 Premièrement, nous définissons la hiérarchie des rôles de notre application dans le champ `role_hierarchy`. Les rôles `ROLE_ADMIN` et `ROLE_SUPER_ADMIN` y sont définis et nous assignons également le rôle **ADMIN** au **SUPER ADMIN**.
 
-```yml
+```yml title="/config/packages/security.yaml"
 role_hierarchy:
         ROLE_ADMIN: ROLE_ADMIN
         ROLE_SUPER_ADMIN: [ ROLE_ADMIN ]
@@ -376,14 +359,14 @@ role_hierarchy:
 
 Ensuite nous configurons l’accès à certaines parties de notre application en fonction des rôles utilisateurs et utilisatrices dans le champ access_control. Si un utilisateur tente d’accéder à une route du back-office sans être authentifié, il sera redirigé sur la page login.
 
-```yml
+```yml title="/config/packages/security.yaml"
 access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
 ```
 
 Nous avons également mis en place une configuration qui permet de restreindre l’accès à la gestion des utilisateurs dans le back-office en précisant que seuls les utilisateurs ayant le rôle `ROLE_SUPER_ADMIN` auront accès à l’entité `USER` dans le système d’administration EasyAdminBundle.
 
-```php
+```php title="/src/Controller/Admin/UserCrudController.php"
 class UserCrudController extends AbstractCrudController
 {
     use FlashMessageTrait;

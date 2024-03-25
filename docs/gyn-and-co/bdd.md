@@ -6,7 +6,7 @@ sidebar_position: 8
 Toute notre application back-end a été mis en place dans un environnement de développement sous Docker. Cela nous a permis d’encapsuler toutes les dépendances, les configurations requises dans des conteneurs autonomes et permettre à chaque membre de l’équipe de développement de travailler avec le même environnement et de faciliter la collaboration.
 Nous avons crée un fichier docker-compose.yml dans lequel nous avons déclaré plusieurs services avec des images Docker afin de créer l’architecture de notre application et faciliter la gestion de plusieurs conteneurs.
 
-```yaml
+```yaml title="/docker-compose.yml"
 # mysql
 mysql8-service:
 container_name: mysql8-container
@@ -43,7 +43,7 @@ La première que nous avons configurée permet de créer notre base de données 
 ## Génération des migrations
 La prochaine étape consistait à créer les tables de notre base de données. Afin de générer les migrations qui seront exécutées pour mettre en place la structure de notre base de données, nous avons créé des entités. Elles représentent table de notre base de données et on y configure les colonnes de notre table avec ce qu’on appelle des propriétés de notre entité.
 
-```php
+```php title="/src/Entity/Tag.php"
 class Tag
 {
     use TimestampableEntity;
@@ -141,7 +141,7 @@ Pour cette étape nous avons créé deux commandes qui vont nous permettre de :
 
 Vous trouverez ci-dessous un extrait du fichier de migration en rapport avec l’entité Doctor et Tag qui a été créer lors du lancement de la première commande.
 
-```php
+```php title="/migrations/Version20221003161344.php"
 <?php
 
 declare(strict_types=1);
