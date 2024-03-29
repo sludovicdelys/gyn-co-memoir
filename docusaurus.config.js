@@ -46,7 +46,13 @@ const config = {
           editUrl:
             'https://gitlab.com/gyn-co-memoir/gyn-co-memoir/-/edit/main/',
         },
-        blog: false, 
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://gitlab.com/gyn-co-memoir/gyn-co-memoir/-/edit/main/',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -59,7 +65,6 @@ const config = {
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         language: "fr",
-        indexBlog: false,
       }
     ],
   ],
@@ -82,6 +87,7 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
       footer: {
